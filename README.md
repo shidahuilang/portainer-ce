@@ -1,12 +1,14 @@
-# public
-portainer-ce 汉化文件
+# portainer-ce
+portainer-ce中文汉化版
 
-X86 CPU一键安装
-```
-sh -c "$(curl -kfsSl https://gitee.com/expin/public/raw/master/onex86.sh)"
+### 🚩 x86一键安装portainer-ce中文汉化版
+
+``` bash
+bash <(curl -s -L git.io/JMxB3)
 ```
 
-N1等ARM64架构CPU一键安装
-```
-sh -c "$(curl -kfsSl https://gitee.com/expin/public/raw/master/one.sh)"
+### 🚩 arm一键安装portainer-ce中文汉化版
+
+``` bash
+bash <(curl -s -L git.io/JMxRe)
 ```
