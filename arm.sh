@@ -57,11 +57,11 @@ echo "现在开始安装Portainer"
 docker pull portainer/portainer-ce:linux-arm64
 
 docker run -d --restart=always --name="portainer" -p $port:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data -v $webdir/public:/public portainer/portainer-ce:linux-arm64
-
+baseip=$(curl -s ipip.ooo)  > /dev/null
 
 if [ "docker inspect --format '{{.State.Running}}' portainer" != "true" ]
 then {
-echo -e "portainer部署成功，${red}浏览器访问$ip:$port \c"
+echo -e "portainer部署成功，${red}面板访问地址：http://${baseip}:$port"
 echo -e "${plain}"
 }
 else
