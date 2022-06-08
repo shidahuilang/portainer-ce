@@ -52,9 +52,9 @@ exit;;
 esac
 echo "现在开始安装Portainer"
 
-docker pull portainer/portainer-ce
+docker pull shidahuilang/portainer:cn
 
-docker run -d --restart=always --name="portainer" -p $port:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data -v $webdir/public:/public portainer/portainer-ce
+docker run -d --restart=always --name=portainer -p 9999:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data shidahuilang/portainer:cn
 baseip=$(curl -s ipip.ooo)  > /dev/null
 
 if [ "docker inspect --format '{{.State.Running}}' portainer" != "true" ]
